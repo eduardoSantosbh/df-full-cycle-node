@@ -16,18 +16,21 @@ connection
     })
 
  
-var nome = "Full Cycle!!"
-People.create({
-    name: nome 
-})
-
 app.get("/",(req, res) => {
+
+    var nome = "Full Cycle!!"
+    
+    People.create({
+        name: nome 
+    })
+    .then(() => {
+
     People.findAll({ raw: true}).then(peoples => {
         res.render("index",{
             peoples: peoples
         });
     });
 });
-
+});
 
 app.listen(5000,()=>{console.log("App rodando!")})
