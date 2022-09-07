@@ -1,8 +1,12 @@
-FROM node:15
+FROM node:16
 
 WORKDIR /usr/src/app
 
-RUN npm i -g npm@8.19.1
+COPY package.json ./
+
+RUN npm install
+
+COPY . .
 
 RUN apt-get update && apt-get install -y wget
 
