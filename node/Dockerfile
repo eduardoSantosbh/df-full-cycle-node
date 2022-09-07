@@ -2,7 +2,7 @@ FROM node:15
 
 WORKDIR /usr/src/app
 
-RUN npm i
+RUN npm i -g npm@8.19.1
 
 RUN apt-get update && apt-get install -y wget
 
