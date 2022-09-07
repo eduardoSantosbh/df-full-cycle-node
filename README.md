@@ -18,8 +18,7 @@ git clone https://github.com/eduardoSantosbh/df-full-cycle-node.git
 
 cd df-full-cycle-node
 
-mkdir mysql
-docker-compose up --build -d
+docker-compose up -d
 ```
 <br/>
 <br/>
